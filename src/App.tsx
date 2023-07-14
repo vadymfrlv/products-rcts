@@ -1,10 +1,13 @@
+import { Product } from './components/Product';
+import { products } from './data/products';
+
 function App() {
   return (
-    <>
-      <div>
-        <p className="text-3xl font-bold">Hello</p>
-      </div>
-    </>
+    <div>
+      {products.map(product => (
+        <Product product={product} key={product.id} />
+      ))}
+    </div>
   );
 }
 
