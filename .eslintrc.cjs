@@ -18,24 +18,14 @@ module.exports = {
   },
   plugins: ['react-refresh'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     '@typescript-eslint/no-non-null-assertion': 'off',
-    // 'import/no-unresolved': 'error',
-    // 'import/named': 'error',
-    // 'import/default': 'error',
-    // 'import/namespace': 'error',
-    // 'import/no-absolute-path': 'error',
-    // 'import/no-duplicates': 'error',
-    // 'import/extensions': ['error', 'ignorePackages'],
   },
-    settings: {
+  settings: {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
-}
+};
