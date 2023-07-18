@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { IProduct } from '../models/models';
 
@@ -24,7 +24,7 @@ export const Product = ({ product }: ProductProps) => {
       {details && (
         <div>
           <p>{product.description}</p>
-          <p className="font-bold">Rate: {product.rating.rate}</p>
+          <p className="font-bold">Rate: {product.rating?.rate}</p>
         </div>
       )}
     </div>

@@ -8,6 +8,10 @@ export const useProducts = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  const addProduct = (product: IProduct) => {
+    setProducts(prev => [...prev, product]);
+  };
+
   useEffect(() => {
     void fetchData();
 
@@ -31,5 +35,5 @@ export const useProducts = () => {
     return response.data;
   }
 
-  return { products, loading, error };
+  return { products, loading, error, addProduct };
 };
